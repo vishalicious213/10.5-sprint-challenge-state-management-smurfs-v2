@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 const AddSmurf = () => {
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
+    const [height, setHeight] = useState('');
+    
     return (
         <form>
             <input type='text' name='name'/>
