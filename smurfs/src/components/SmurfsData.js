@@ -8,7 +8,9 @@ const SmurfsData = () => {
     return (
         smurfs.map(smurf => (
             // console.log(smurf.name);
-            <Smurf name={smurf.name} age={smurf.age} height={smurf.height} key={smurf.id} />
+            <div className='smurfbox' key={smurf.id}>
+                <Smurf name={smurf.name} age={smurf.age} height={smurf.height} />
+            </div>
         ))
     )
 }
