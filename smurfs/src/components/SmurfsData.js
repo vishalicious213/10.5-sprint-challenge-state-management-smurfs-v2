@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Smurf from './Smurf';
 
 const SmurfsData = () => {
     const [smurfs, setSmurfs] = useState([]);
@@ -20,15 +21,9 @@ const SmurfsData = () => {
     // console.log('Smurfs: ', smurfs)
 
     return (
-        // using () instead of {} in the function below means
-        // we can return something w/o a return keyword
         smurfs.map(smurf => (
             // console.log(smurf.name);
-                <section key={smurf.id}>
-                    <div>Name: {smurf.name}</div>
-                    <div>Age: {smurf.age}</div>
-                    <div>Height: {smurf.height}</div>
-                </section>
+            <Smurf name={smurf.name} age={smurf.age} height={smurf.height} key={smurf.id} />
         ))
     )
 }
