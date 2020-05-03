@@ -3,22 +3,22 @@ import axios from 'axios';
 import Smurf from './Smurf';
 
 const SmurfsData = () => {
-    const [smurfs, setSmurfs] = useState([]);
-    const getData = () => {
-        axios
-            .get('http://localhost:3333/smurfs')
-            .then(results => {
-                // console.log('Results: ', results.data);
-                setSmurfs(results.data);
-            })
-            .catch(error => console.log('Error: ', error));
-    }
+    // const [smurfs, setSmurfs] = useState([]);
+    // const getData = () => {
+    //     axios
+    //         .get('http://localhost:3333/smurfs')
+    //         .then(results => {
+    //             // console.log('Results: ', results.data);
+    //             setSmurfs(results.data);
+    //         })
+    //         .catch(error => console.log('Error: ', error));
+    // }
 
-    useEffect(() => {
-        getData();
-    }, []);
+    // useEffect(() => {
+    //     getData();
+    // }, []);
 
-    // console.log('Smurfs: ', smurfs)
+    // // console.log('Smurfs: ', smurfs)
 
     return (
         smurfs.map(smurf => (
