@@ -4,8 +4,8 @@ import axios from 'axios';
 
 const AddSmurf = () => {
     const [name, setName] = useState('');
-    const [age, setAge] = useState('');
-    const [height, setHeight] = useState('');
+    const [age, setAge] = useState('100');          // age & height needed initial values when I made them
+    const [height, setHeight] = useState('4cm');    // select (drop-downs) instead of inputs
 
     // useContext to pull in state (smurfs) to update array (setSmurfs)
     const [smurfs, setSmurfs] = useContext(SmurfContext);
@@ -29,7 +29,10 @@ const AddSmurf = () => {
         axios
             .post('http://localhost:3333/smurfs', { name, age, height})
             .catch(error => console.log('POST Error: ', error));
-        console.log(smurfs)
+        console.log(smurfs);
+        console.log('Name: ', name);
+        console.log('Age: ', age);
+        console.log('Height: ', height);
     }
 
     return (
@@ -38,7 +41,7 @@ const AddSmurf = () => {
 
             <div className='age-height'>
                 <span>Age: </span>
-                <select className='drop-down' name='age' onChange={updateAge}>
+                <select className='drop-down' name='age' value={age} onChange={updateAge}>
                     <option value="100">100</option>
                     <option value="150">150</option>
                     <option value="200">200</option>
@@ -49,7 +52,7 @@ const AddSmurf = () => {
 
             <div className='age-height'>
                 <span>Height: </span>
-                <select className='drop-down' name='height' onChange={updateHeight}>
+                <select className='drop-down' name='height' value={height} onChange={updateHeight}>
                     <option value="4cm">4cm</option>
                     <option value="4.5cm">4.5cm</option>
                     <option value="5cm">5cm</option>
