@@ -9,9 +9,7 @@ const App = () => {
         <SmurfProvider>
             <div className="App">
                 <h1>Welcome to the Smurf Village!</h1>
-                <div>Welcome to your state management version of Smurfs!</div>
-                <div>Start inside of your `src/index.js` file!</div>
-                <div>Have fun!</div>
+                <div>One smurf does not a village make. Add some smurfs to help populate our village!</div>
                 <AddSmurf />
                 <div className='village'>
                     <SmurfsData />

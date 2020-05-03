@@ -4,13 +4,48 @@
 }
 
 .village {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+input {
+  margin: .25rem;
+  border: 1px solid deepskyblue;
+  border-radius: .5rem;
+  padding: .15rem;
+}
+
+button {
+  margin: .25rem;
+  border-radius: .5rem;
 }
 
 .smurfbox {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
+  border-radius: 1rem;
+  padding: .25rem;
   margin: 1rem;
+  background-image: linear-gradient(rgba(0, 191, 255, 0.2), rgba(255, 0, 0, 0.3));
+}
+
+.smurf-image {
+  width: 50%;
+}
+
+h3 {
+  border: 1px solid gainsboro;
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  color: white;
+  /* text-shadow: 1px 0 .5px black; */
+  background: rgba(255, 64, 0, .6);
 }

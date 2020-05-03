@@ -37,7 +37,9 @@ const AddSmurf = () => {
             <input type='text' name='name' placeholder='Name' value={name} onChange={updateName}/>
             <input type='text' name='age' placeholder='Age' value={age} onChange={updateAge}/>
             <input type='text' name='height' placeholder='Height' value={height} onChange={updateHeight}/>
-            <button>Add Smurf</button>
+            <div>
+                <button>Add Smurf</button>
+            </div>
         </form>
     )
 }
