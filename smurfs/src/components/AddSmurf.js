@@ -29,10 +29,6 @@ const AddSmurf = () => {
         axios
             .post('http://localhost:3333/smurfs', { name, age, height})
             .catch(error => console.log('POST Error: ', error));
-        console.log(smurfs);
-        console.log('Name: ', name);
-        console.log('Age: ', age);
-        console.log('Height: ', height);
     }
 
     return (
