@@ -20,16 +20,16 @@ const SmurfsData = () => {
     // console.log('Smurfs: ', smurfs)
 
     return (
-        smurfs.map(smurf => {
+        // using () instead of {} in the function below means
+        // we can return something w/o a return keyword
+        smurfs.map(smurf => (
             // console.log(smurf.name);
-            return(
                 <section key={smurf.id}>
                     <div>Name: {smurf.name}</div>
                     <div>Age: {smurf.age}</div>
                     <div>Height: {smurf.height}</div>
                 </section>
-            )
-        })
+        ))
     )
 }
 
