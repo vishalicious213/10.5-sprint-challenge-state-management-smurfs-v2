@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { SmurfContext } from './SmurfContext';
 
 const AddSmurf = () => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [height, setHeight] = useState('');
+
+    // useContext to pull in state (smurfs) to update array (setSmurfs)
+    const [smurfs, setSmurfs] = useContext(SmurfContext);
 
     const updateName = event => {
         setName(event.target.value);
@@ -19,13 +23,14 @@ const AddSmurf = () => {
 
     const submitSmurf = event => {
         event.preventDefault();
+        setSmurfs(prevSmurfs => [...prevSmurfs], { name: name, age: age, height: height})
     }
 
     return (
-        <form>
-            <input type='text' name='name' value={name} onChange={updateName}/>
-            <input type='text' name='age' value={age} onChange={updateAge}/>
-            <input type='text' name='height' value={height} onChange={updateHeight}/>
+        <form onSubmit={submitSmurf}>
+            <input type='text' name='name' placeholder='Name' value={name} onChange={updateName}/>
+            <input type='text' name='age' placeholder='Age' value={age} onChange={updateAge}/>
+            <input type='text' name='height' placeholder='Height' value={height} onChange={updateHeight}/>
             <button>Add Smurf</button>
         </form>
     )
