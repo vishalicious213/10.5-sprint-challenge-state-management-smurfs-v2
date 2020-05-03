@@ -25,6 +25,7 @@ const AddSmurf = () => {
     const submitSmurf = event => {
         event.preventDefault();
         setSmurfs(prevSmurfs => [...prevSmurfs, { name: name, age: age, height: height, id: Date.now()}]);
+        //my first POST request. refreshed screen and the data persisted! same when file saved in VS Studio!
         axios
             .post('http://localhost:3333/smurfs', { name, age, height})
             .catch(error => console.log('POST Error: ', error));
