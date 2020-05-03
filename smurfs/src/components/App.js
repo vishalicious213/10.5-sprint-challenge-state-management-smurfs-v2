@@ -1,6 +1,20 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import { setState } from 'react';
+import './App.css';
 import axios from 'axios';
+
+// Make new context
+const SmurfContext = React.createContext();
+
+// Create provider component
+const SmurfProvider = () => {
+  const [smurfs, setSmurfs] = setState();
+  return (
+    <SmurfContext.Provider>
+      {smurfs.children}
+    </SmurfContext.Provider>
+  )
+}
 
 class App extends Component {
   getData = () => {
@@ -29,7 +43,6 @@ class App extends Component {
 }
 
 export default App;
-
 
 // class App extends Component {
 //   render() {
