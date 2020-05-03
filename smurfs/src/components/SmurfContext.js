@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
+import axios from 'axios';
 
-export const SmurfProvider = () => {
+// context (shares provider data to components)
+export const SmurfContext = createContext();
+
+// provider (holds the data for context to share)
+export const SmurfProvider = (props) => {
     const [smurfs, setSmurfs] = useState([]);
     const getData = () => {
         axios
@@ -12,6 +17,7 @@ export const SmurfProvider = () => {
             .catch(error => console.log('Error: ', error));
     }
 
+    // initial axios call. runs once (dependency array)
     useEffect(() => {
         getData();
     }, []);
@@ -19,6 +25,8 @@ export const SmurfProvider = () => {
     // console.log('Smurfs: ', smurfs)
 
     return (
-
+        <SmurfContext.Provider>
+            {props.children}
+        </SmurfContext.Provider>
     )
 }
