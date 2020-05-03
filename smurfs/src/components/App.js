@@ -9,7 +9,7 @@ const App = () => {
         <SmurfProvider>
             <div className="App">
                 <h1>Welcome to the Smurf Village!</h1>
-                <div>One smurf does not a village make. Add some smurfs to help populate our village!</div>
+                <div className='intro'>One smurf does not a village make. Add some smurfs to help populate our village!</div>
                 <AddSmurf />
                 <div className='village'>
                     <SmurfsData />

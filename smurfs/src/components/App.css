@@ -5,7 +5,7 @@
 
 .village {
   /* border: 1px solid red; */
-  margin: 1rem;
+  /* margin: 1rem; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -65,4 +65,28 @@ h3 {
   color: white;
   /* text-shadow: 1px 0 .5px black; */
   background: rgba(255, 64, 0, .6);
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+  .intro {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .village {
+    justify-content: center;
+  }
+
+  form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .smurfbox {
+    width: 35%;
+  }
 }
