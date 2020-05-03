@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { SmurfContext } from './SmurfContext';
+import axios from 'axios';
 
 const AddSmurf = () => {
     const [name, setName] = useState('');
@@ -23,7 +24,11 @@ const AddSmurf = () => {
 
     const submitSmurf = event => {
         event.preventDefault();
-        setSmurfs(prevSmurfs => [...prevSmurfs, { name: name, age: age, height: height, id: Date.now()}])
+        setSmurfs(prevSmurfs => [...prevSmurfs, { name: name, age: age, height: height, id: Date.now()}]);
+        axios
+            .post('http://localhost:3333/smurfs', { name, age, height})
+            .catch(error => console.log('POST Error: ', error));
+        console.log(smurfs)
     }
 
     return (
