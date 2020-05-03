@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import SmurfsData from './SmurfsData';
 import { SmurfProvider } from './SmurfContext';
+import AddSmurf from './AddSmurf';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
                 <div>Start inside of your `src/index.js` file!</div>
                 <div>Have fun!</div>
                 <SmurfsData />
+                <AddSmurf />
             </div>
         </SmurfProvider>
     );

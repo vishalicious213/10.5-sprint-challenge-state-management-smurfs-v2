@@ -17,6 +17,10 @@ const AddSmurf = () => {
         setHeight(event.target.value);
     }
 
+    const submitSmurf = event => {
+        event.preventDefault();
+    }
+
     return (
         <form>
             <input type='text' name='name' value={name} onChange={updateName}/>
@@ -26,3 +30,5 @@ const AddSmurf = () => {
         </form>
     )
 }
+
+export default AddSmurf;
