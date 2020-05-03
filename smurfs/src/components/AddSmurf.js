@@ -23,7 +23,7 @@ const AddSmurf = () => {
 
     const submitSmurf = event => {
         event.preventDefault();
-        setSmurfs(prevSmurfs => [...prevSmurfs], { name: name, age: age, height: height})
+        setSmurfs(prevSmurfs => [...prevSmurfs, { name: name, age: age, height: height, id: Date.now()}])
     }
 
     return (
