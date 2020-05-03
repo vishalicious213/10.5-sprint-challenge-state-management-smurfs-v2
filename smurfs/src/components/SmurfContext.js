@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 
 // context (shares provider data to components)
@@ -25,7 +25,7 @@ export const SmurfProvider = (props) => {
     // console.log('Smurfs: ', smurfs)
 
     return (
-        <SmurfContext.Provider>
+        <SmurfContext.Provider value={[smurfs, setSmurfs]}>
             {props.children}
         </SmurfContext.Provider>
     )

@@ -1,7 +1,8 @@
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
-import React from 'react';
+import React, { useContext } from 'react';
 import Smurf from './Smurf';
+import { SmurfContext } from './SmurfContext';
 
 const SmurfsData = () => {
     // const [smurfs, setSmurfs] = useState([]);
@@ -20,6 +21,8 @@ const SmurfsData = () => {
     // }, []);
 
     // // console.log('Smurfs: ', smurfs)
+
+    const [smurfs, setSmurfs] = useContext(SmurfContext);
 
     return (
         smurfs.map(smurf => (
