@@ -13,6 +13,10 @@
 
 form {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
 }
 
 input {
@@ -20,6 +24,19 @@ input {
   border: 1px solid deepskyblue;
   border-radius: .5rem;
   padding: .15rem;
+}
+
+.age-height {
+  margin: .25rem;
+  border: 1px solid deepskyblue;
+  border-radius: .5rem;
+  padding-left: .25rem;
+  padding-right: .15rem;
+  font-size: .9rem;
+}
+
+.drop-down {
+  border-radius: .5rem;
 }
 
 button {

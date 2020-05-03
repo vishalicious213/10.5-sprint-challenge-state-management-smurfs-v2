@@ -35,8 +35,28 @@ const AddSmurf = () => {
     return (
         <form onSubmit={submitSmurf}>
             <input type='text' name='name' placeholder='Name' value={name} onChange={updateName}/>
-            <input type='text' name='age' placeholder='Age' value={age} onChange={updateAge}/>
-            <input type='text' name='height' placeholder='Height' value={height} onChange={updateHeight}/>
+
+            <div className='age-height'>
+                <span>Age: </span>
+                <select className='drop-down' name='age' onChange={updateAge}>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                    <option value="250">250</option>
+                </select>
+            </div>
+            {/* <input type='text' name='age' placeholder='Age' value={age} onChange={updateAge}/> */}
+
+            <div className='age-height'>
+                <span>Height: </span>
+                <select className='drop-down' name='height' onChange={updateHeight}>
+                    <option value="4cm">4cm</option>
+                    <option value="4.5cm">4.5cm</option>
+                    <option value="5cm">5cm</option>
+                    <option value="5.5cm">5.5cm</option>
+                </select>
+            </div>
+            {/* <input type='text' name='height' placeholder='Height' value={height} onChange={updateHeight}/> */}
             <div>
                 <button>Add Smurf</button>
             </div>
