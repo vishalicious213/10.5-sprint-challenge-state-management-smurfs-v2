@@ -20,8 +20,8 @@ const DeleteSmurf = (id) => {
 
     return (
         <form onSubmit={deleteSmurf}>
-            <div>
-                <button>Delete Smurf</button>
+            <div className='delete-button-container'>
+                <button className='delete-button' title='Delete Smurf'></button>
             </div>
         </form>
     )

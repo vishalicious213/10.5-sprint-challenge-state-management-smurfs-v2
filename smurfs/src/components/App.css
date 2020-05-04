@@ -50,6 +50,7 @@ button {
   padding: .25rem;
   margin: 1rem;
   background-image: linear-gradient(rgba(0, 191, 255, 0.2), rgba(255, 0, 0, 0.3));
+  position: relative;
 }
 
 .smurf-image {
@@ -89,4 +90,21 @@ h3 {
   .smurfbox {
     width: 35%;
   }
+}
+
+.delete-button-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.delete-button {
+  background-image: url('./gargamel.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.75;
 }
