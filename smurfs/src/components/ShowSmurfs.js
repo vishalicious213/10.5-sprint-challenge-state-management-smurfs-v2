@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Smurf from './Smurf';
 import { SmurfContext } from './SmurfContext';
 
-const SmurfsData = () => {
+const ShowSmurfs = () => {
     const [smurfs, setSmurfs] = useContext(SmurfContext);
 
     return (
@@ -15,4 +15,4 @@ const SmurfsData = () => {
     )
 }
 
-export default SmurfsData;
+export default ShowSmurfs;

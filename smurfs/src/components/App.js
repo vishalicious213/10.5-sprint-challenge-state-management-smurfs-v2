@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SmurfsData from './SmurfsData';
+import ShowSmurfs from './ShowSmurfs';
 import { SmurfProvider } from './SmurfContext';
 import AddSmurf from './AddSmurf';
 
@@ -12,7 +12,7 @@ const App = () => {
                 <div className='intro'>One smurf does not a village make. Add some smurfs to help populate our village!</div>
                 <AddSmurf />
                 <div className='village'>
-                    <SmurfsData />
+                    <ShowSmurfs />
                 </div>
             </div>
         </SmurfProvider>
