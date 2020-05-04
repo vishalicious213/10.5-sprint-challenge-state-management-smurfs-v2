@@ -6,6 +6,7 @@ const AddSmurf = () => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('100');          // age & height needed initial values when I made them
     const [height, setHeight] = useState('4cm');    // select (drop-downs) instead of inputs
+    // const [id, setId] = useState();
 
     // useContext to pull in state (smurfs) to update array (setSmurfs)
     const [smurfs, setSmurfs] = useContext(SmurfContext);
@@ -22,9 +23,17 @@ const AddSmurf = () => {
         setHeight(event.target.value);
     }
 
+    // const updateId = () => {
+    //     setId((Date.now()));
+    //     console.log('ID in update: ', id);
+    // }
+
     const submitSmurf = event => {
         event.preventDefault();
-        setSmurfs(prevSmurfs => [...prevSmurfs, { name: name, age: age, height: height, id: Date.now()}]);
+        // setId(Date.now());
+        // updateId();
+        // console.log('ID in submit: ', id);
+        setSmurfs(prevSmurfs => [...prevSmurfs, { name: name, age: age, height: height}]);
         //my first POST request. refreshed screen and the data persisted! same when file saved in VS Studio!
         axios
             .post('http://localhost:3333/smurfs', { name, age, height})
