@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 form {
@@ -48,7 +49,7 @@ button {
   /* border: 1px solid orange; */
   border-radius: 1rem;
   padding: .25rem;
-  margin: 1rem;
+  margin: .5rem;
   background-image: linear-gradient(rgba(0, 191, 255, 0.2), rgba(255, 0, 0, 0.3));
   position: relative;
 }
@@ -72,6 +73,23 @@ h3 {
   background: rgba(255, 64, 0, .6);
 }
 
+.delete-button-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.delete-button {
+  background-image: url('./gargamel.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
 /* MOBILE */
 
 @media screen and (max-width: 768px) {
@@ -91,24 +109,7 @@ h3 {
     margin-right: auto;
   }
 
-  .smurfbox {
+  /* .smurfbox {
     width: 35%;
-  }
-}
-
-.delete-button-container {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-.delete-button {
-  background-image: url('./gargamel.png');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  height: 50px;
-  width: 50px;
-  border: none;
-  border-radius: 50%;
-  opacity: 0.75;
+  } */
 }
