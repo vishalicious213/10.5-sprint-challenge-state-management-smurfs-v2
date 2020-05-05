@@ -22,7 +22,7 @@ export const SmurfProvider = (props) => {
         getData();
     }, []);
 
-    console.log('Smurfs: ', smurfs)
+    // console.log('Smurfs: ', smurfs)
 
     return (
         <SmurfContext.Provider value={[smurfs, setSmurfs]}>
