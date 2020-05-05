@@ -1,3 +1,124 @@
 .App {
   text-align: center;
+  color: white;
+}
+
+.village {
+  /* border: 1px solid red; */
+  /* margin: 1rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+input {
+  margin: .25rem;
+  border: 1px solid deepskyblue;
+  border-radius: .5rem;
+  padding: .15rem;
+}
+
+.age-height {
+  margin: .25rem;
+  border: 1px solid deepskyblue;
+  border-radius: .5rem;
+  padding-left: .25rem;
+  padding-right: .15rem;
+  font-size: .9rem;
+}
+
+.drop-down {
+  border-radius: .5rem;
+}
+
+button {
+  margin: .25rem;
+  border-radius: .5rem;
+}
+
+.smurfbox {
+  /* border: 1px solid orange; */
+  border-radius: 1rem;
+  padding: .25rem;
+  margin: .5rem;
+  background-image: linear-gradient(rgba(0, 191, 255, 0.2), rgba(255, 0, 0, 0.3));
+  position: relative;
+}
+
+.smurf-image {
+  width: 50%;
+}
+
+.stats {
+  font-size: .9rem;
+}
+
+h3 {
+  border: 1px solid gainsboro;
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  color: white;
+  /* text-shadow: 1px 0 .5px black; */
+  background: rgba(255, 64, 0, .6);
+}
+
+.delete-button-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.delete-button {
+  background-image: url('./gargamel.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .intro {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .village {
+    justify-content: center;
+  }
+
+  form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .delete-button {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .smurfbox {
+    width: 40%;
+  }
 }
