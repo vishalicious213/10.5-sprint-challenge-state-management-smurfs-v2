@@ -16,7 +16,7 @@ let smurfs = [
   {
     name: 'Brainy',
     age: 200,
-    height: '5cm',
+    height: '5cm Smurf',
     id: 0
   }
 ];

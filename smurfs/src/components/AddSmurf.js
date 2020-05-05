@@ -5,7 +5,7 @@ import axios from 'axios';
 const AddSmurf = () => {
     const [name, setName] = useState('');
     const [age, setAge] = useState('100');          // age & height needed initial values when I made them
-    const [height, setHeight] = useState('4cm');    // select (drop-downs) instead of inputs
+    const [height, setHeight] = useState('4cm Smurf');    // select (drop-downs) instead of inputs
     // const [id, setId] = useState();
 
     // useContext to pull in state (smurfs) to update array (setSmurfs)
@@ -56,12 +56,16 @@ const AddSmurf = () => {
             {/* <input type='text' name='age' placeholder='Age' value={age} onChange={updateAge}/> */}
 
             <div className='age-height'>
-                <span>Height: </span>
+                <span>Height/Smurf: </span>
                 <select className='drop-down' name='height' value={height} onChange={updateHeight}>
-                    <option value="4cm">4cm</option>
-                    <option value="4.5cm">4.5cm</option>
-                    <option value="5cm">5cm</option>
-                    <option value="5.5cm">5.5cm</option>
+                    <option value="4cm Smurf">4cm Smurf</option>
+                    <option value="4cm Smurfette">4cm Smurfette</option>
+                    <option value="4.5cm Smurf">4.5cm Smurf</option>
+                    <option value="4.5cm Smurfette">4.5cm Smurfette</option>
+                    <option value="5cm Smurf">5cm Smurf</option>
+                    <option value="5cm Smurfette">5cm Smurfette</option>
+                    <option value="5.5cm Smurf">5.5cm Smurf</option>
+                    <option value="5.5cm Smurfette">5.5cm Smurfette</option>
                 </select>
             </div>
             {/* <input type='text' name='height' placeholder='Height' value={height} onChange={updateHeight}/> */}

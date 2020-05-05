@@ -57,6 +57,10 @@ button {
   width: 50%;
 }
 
+.stats {
+  font-size: .9rem;
+}
+
 h3 {
   border: 1px solid gainsboro;
   border-radius: 1rem;
