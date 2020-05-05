@@ -59,7 +59,7 @@ const AddSmurf = () => {
             {/* <input type='text' name='age' placeholder='Age' value={age} onChange={updateAge}/> */}
 
             <div className='age-height'>
-                <span>Height/Smurf: </span>
+                <span>Stats: </span>
                 <select className='drop-down' name='height' value={height} onChange={updateHeight}>
                     <option value="4cm Smurf">4cm Smurf</option>
                     <option value="4cm Smurfette">4cm Smurfette</option>
