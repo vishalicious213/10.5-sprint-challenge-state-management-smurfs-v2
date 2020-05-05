@@ -93,6 +93,10 @@ h3 {
 /* MOBILE */
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
   .intro {
     width: 90%;
     margin-left: auto;
@@ -114,7 +118,7 @@ h3 {
     width: 2.5rem;
   }
 
-  /* .smurfbox {
-    width: 35%;
-  } */
+  .smurfbox {
+    width: 40%;
+  }
 }
